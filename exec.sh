@@ -1,9 +1,9 @@
 # Installation - for Ubuntu based system
 if [ -x "$(command -v apt-get)" ]
 then
-    echo "Updating apt packages ..."
+    echo "Updating apt packages, wait a few minutes..."
     sudo apt-get update -y > setup.log
-    echo "Installing PYTHON3 ..."
+    echo "Installing PYTHON3, wait a few minutes......"
     sudo apt-get -y install python3 > setup.log
     sudo apt-get -y install python3-pip >> setup.log
     echo "Installing additional components for Python3 ..."
@@ -15,9 +15,9 @@ fi
 # Installation - for CentOs based system
 if [ -x "$(command -v yum)" ]
 then
-    echo "Updating yum packages"
+    echo "Updating yum packages, wait a few minutes..."
     sudo yum update -y > setup.log
-    echo "Installing PYTHON3 ..."
+    echo "Installing PYTHON3, wait a few minutes... ..."
     sudo yum -y install python3 > setup.log
     sudo yum -y install python3-pip >> setup.log
     echo "Installing additional components for Python3 ..."
