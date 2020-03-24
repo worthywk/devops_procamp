@@ -7,7 +7,7 @@ def get_os_info():
         'cpu': (info.cpu_percent(),info.cpu_times()),
         'ram': info.virtual_memory(),
         'swap': info.swap_memory(),
-        'exit': 'Program ends'
+        'exit': 'Python program ends'
     }
 
 
