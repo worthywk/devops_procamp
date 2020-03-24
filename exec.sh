@@ -47,7 +47,7 @@ case $yesno in
                 echo "Nothing executes";
                 exit 1
                 ;;
-        *) echo "Invalid input, please type yes or no"
+        *) echo "Invalid input, sorry you had one attempt"
             ;;
 esac
 
