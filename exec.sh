@@ -9,7 +9,7 @@ then
     echo "Installing additional components for Python3 ..."
     sudo apt-get -y install gcc python3-dev >> setup.log
     echo "Installing Linux monitoring utilities ..."
-    sudo apt-get -y install iftop htop iotop >> setup.log
+    sudo apt-get -y install iftop htop >> setup.log
 fi
 
 # Installation - for CentOs based system
@@ -23,7 +23,7 @@ then
     echo "Installing additional components for Python3 ..."
     sudo yum -y install gcc python3-devel >> setup.log
     echo "Installing Linux monitoring utilities ..."
-    sudo yum -y install iftop htop iotop >> setup.log
+    sudo yum -y install iftop htop >> setup.log
 fi
 
 echo "Installing Python monitoring library psutil ..."
@@ -37,16 +37,18 @@ read yesno
 case $yesno in
 
         [yY] | [yY][Ee][Ss] )
+                echo "iftop result: "
                 iftop
-                iotop
+                echo "htop is running ..."
                 htop
                 ;;
 
-        [nN] | [n|N][O|o] )
+        [nN] | [nN][Oo] )
                 echo "Nothing executes";
                 exit 1
                 ;;
         *) echo "Invalid input, please type yes or no"
             ;;
 esac
+
 echo "Thank you for using my script"
