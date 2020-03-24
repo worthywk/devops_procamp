@@ -37,7 +37,7 @@ read yesno
 case $yesno in
 
         [yY] | [yY][Ee][Ss] )
-                echo "Choose utilities to run (iftop or htop)
+                echo "Choose utilities to run (iftop or htop)"
                 read $utility
                 
                 case $utility in
@@ -49,14 +49,14 @@ case $yesno in
                             echo "htop is running ..."
                             htop
                             ;;
-                ;;
+                esac
+        ;;
                 
         [nN] | [nN][Oo] )
                 echo "Nothing executes";
                 exit 1
-                ;;
+        ;;
         *) echo "Invalid input, sorry you had one attempt"
-            ;;
+        ;;
 esac
-
 echo "Thank you for using my script"
