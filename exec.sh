@@ -30,3 +30,23 @@ echo "Installing Python monitoring library psutil ..."
 sudo pip3 install psutil
 echo "Running Program ..."
 python3 get_os_info.py
+
+echo "Do you want to use linux utilities for getting more information? (yes or no)"
+read yesno
+
+case $yesno in
+
+        [yY] | [yY][Ee][Ss] )
+                iftop
+                iotop
+                htop
+                ;;
+
+        [nN] | [n|N][O|o] )
+                echo "Nothing executes";
+                exit 1
+                ;;
+        *) echo "Invalid input, please type yes or no"
+            ;;
+esac
+echo "Thank you for using my script"
