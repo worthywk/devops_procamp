@@ -38,7 +38,7 @@ case $yesno in
 
         [yY] | [yY][Ee][Ss] )
                 echo "Choose utilities to run (iftop or htop)"
-                read $utility
+                read utility
                 
                 case $utility in
                         [iI][fF][tT][oO][Pp] )
