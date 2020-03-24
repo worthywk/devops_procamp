@@ -37,12 +37,20 @@ read yesno
 case $yesno in
 
         [yY] | [yY][Ee][Ss] )
-                echo "iftop result: "
-                iftop
-                echo "htop is running ..."
-                htop
+                echo "Choose utilities to run (iftop or htop)
+                read $utility
+                
+                case $utility in
+                        [iI][fF][tT][oO][Pp] )
+                            echo "iftop is running ..."
+                            iftop
+                            ;;
+                        [hH][tT][oO][pP] )
+                            echo "htop is running ..."
+                            htop
+                            ;;
                 ;;
-
+                
         [nN] | [nN][Oo] )
                 echo "Nothing executes";
                 exit 1
